@@ -25,14 +25,19 @@ export default new Vuex.Store({
   },
   actions: {
     performLoginAction({ commit }, payload) {
+
       return new Promise((resolve, reject) => {
         axios
           .post("http://localhost:8000/api/v1/login", {
             email: payload.email,
             password: payload.password,
-            client: "vuexx",
-            // client_secret: "iealnqhYxfPrM5Z6uVUGU1K5nGXsLkiYK9cw1kqN"
-          })
+            // form_params : {
+              // grant_type : 'client_credentials',
+              // client_id :9,
+              // client_secret :'24cQ6pQpIs4X5QQAr6HopnQDeQyZw1mikaRm9jcc',
+              // 'scope' :'your-scope',
+      // }
+          } )
           .then(res => {
                         // eslint-disable-next-line no-console
                         console.log(res);

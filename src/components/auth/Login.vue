@@ -29,9 +29,10 @@
               <v-card-text>
                 <v-form>
                   <v-text-field
-                    label="Login"
-                    name="login"
-                    type="text"
+                    label="email"
+                    name="email"
+                    type="email"
+                    v-model="email"
                   ></v-text-field>
 
                   <v-text-field
@@ -39,6 +40,7 @@
                     label="Password"
                     name="password"
                     type="password"
+                    v-model="password"
                   ></v-text-field>
                 </v-form>
               </v-card-text>
@@ -56,6 +58,7 @@
 
 <script>
 // import axios from "axios";
+// import router from '../../router'
 
 export default {
   name: "login",
@@ -77,7 +80,6 @@ export default {
         })
         .then(res => {
           this.isLoading = false;
-
           this.$router.push("/profile");
           // eslint-disable-next-line no-console
           console.log(res);
@@ -85,7 +87,6 @@ export default {
         .catch(err => {
           this.isLoading = false;
           this.error = " There was error during login process";
-                        // console.log(res);
         // eslint-disable-next-line no-console
           console.log(err.message);
         });
