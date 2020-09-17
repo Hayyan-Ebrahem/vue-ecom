@@ -58,7 +58,7 @@
 
 <script>
 // import axios from "axios";
-// import router from '../../router'
+import router from '../../router'
 
 export default {
   name: "login",
@@ -80,7 +80,7 @@ export default {
         })
         .then(res => {
           this.isLoading = false;
-          this.$router.push("/profile");
+          router.push("/list").catch(err => {});
           // eslint-disable-next-line no-console
           console.log(res);
         })

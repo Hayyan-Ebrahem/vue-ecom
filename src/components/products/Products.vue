@@ -1,5 +1,8 @@
 <template>
-  <ul>
+<div id ="app">
+  <v-app>
+<v-container>
+ <ul>
     <li
       v-for="product in products"
       :key="product.id">
@@ -12,6 +15,11 @@
       </button>
     </li>
   </ul>
+</v-container>
+</v-app>
+</div>
+
+ 
 </template>
 
 <script>

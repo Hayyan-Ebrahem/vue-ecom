@@ -39,8 +39,6 @@ export default new Vuex.Store({
       // }
           } )
           .then(res => {
-                        // eslint-disable-next-line no-console
-                        console.log(res);
             commit("SET_token", res.data.access_token);
 
             commit("SET_loggedIn", true);

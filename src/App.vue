@@ -1,16 +1,16 @@
 <template>
  <div>
- <Login></Login>
+ <Products></Products>
  </div>
 </template>
 
 <script>
-import Login from "./components/auth/Login";
+import Products from "./components/products/Products";
 
 export default {
   name: "App",
   components: {
-    Login
+    Products,
   },
   data: () => ({
     //
